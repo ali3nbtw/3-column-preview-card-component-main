@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--Bright-orange: hsl(31, 77%, 52%);
+	--Dark-cyan: hsl(184, 100%, 22%);
+	--Very-dark-cyan: hsl(179, 100%, 13%);
+
+	--pad: 30px;
+
+	--br: 10px;
+
+	--section-h: 375px;
+	--section-w: 350px;
+
+	--content-direction: column;
+}
+main {
+	display: flex;
+	flex-direction: var(--content-direction);
+}
+img {
+	width: 50px;
+}
+body {
+	padding: 5%;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+p {
+	font-size: 15px;
+	color: hsla(0, 0%, 100%, 0.75);
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 300;
+}
+h2 {
+	font-family: 'Big Shoulders Display', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+}
+.sedans-s {
+	background-color: var(--Bright-orange);
+	padding: var(--pad);
+	border-radius: var(--br) var(--br) 0 0;
+	height: var(--section-h);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: var(--flex-gap);
+}
+.suvs-s {
+	background-color: var(--Dark-cyan);
+	padding: var(--pad);
+	height: var(--section-h);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: var(--flex-gap);
+}
+.luxury-s {
+	background-color: var(--Very-dark-cyan);
+	padding: var(--pad);
+	border-radius: 0 0 var(--br) var(--br);
+	height: var(--section-h);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: var(--flex-gap);
+}
+button {
+	background-color: white;
+	border-radius: 20px;
+	height: 40px;
+	border: none;
+	width: 50%;
+}
+.sedans-b {
+	color: var(--Bright-orange);
+}
+.suvs-b {
+	color: var(--Dark-cyan);
+}
+.luxury-b {
+	color: var(--Very-dark-cyan);
+}
+@media screen and (min-width: 1280px) {
+	:root {
+		--pad: 50px;
+
+		--content-direction: row;
+		--section-h: 600px;
+	}
+	body {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	img {
+		width: 70px;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	.sedans-s {
+		border-radius: var(--br) 0 0 var(--br);
+		width: var(--section-w);
+	}
+	.suvs-s {
+		width: var(--section-w);
+	}
+	.luxury-s {
+		border-radius: 0 var(--br) var(--br) 0;
+		width: var(--section-w);
+	}
+	button {
+		margin-top: 100px;
+		height: 46px;
+		border-radius: 23px;
+		width: 55%;
+	}
+}
